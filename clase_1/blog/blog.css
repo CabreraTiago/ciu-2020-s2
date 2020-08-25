@@ -1,0 +1,110 @@
+.nav-blog {
+    background-color: #020d6e;
+    overflow: hidden;
+}
+
+.nav-blog a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.nav-blog a:hover {
+    background-color: #691518;
+    color: white;
+}
+
+.nav-blog a.active {
+    background-color: #691518;
+    color: white;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+.separador1 {
+    clear: both;
+    visibility: hidden;
+}
+
+.separador2 {
+    width: 300px;
+    border: 1px solid #020d6e;
+}
+
+.separador3 {
+    width: 90%;
+}
+
+.div-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.div-children {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 30%;
+}
+
+.img-heroes {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+p {
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+ol {
+    font-family: Helvetica;
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.div-ul {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.listado-final {
+    font-family: Arial;
+    font-size: 15px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #020d6e;
+    color: white;
+    font-family: Helvetica;
+}
+
+.img-galeria {
+    width: 600px;
+    height: 400px;
+}
