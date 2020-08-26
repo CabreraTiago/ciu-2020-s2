@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetBook</title>
+    <link rel="stylesheet" href="petbook.css" type="text/css">
+    <!-- https://blissful-tereshkova-f07bd5.netlify.app/ -->
+</head>
+
+<body>
+
+    <h1>PetBook</h1>
+
+    <p>Registre a su mascota</p>
+
+    <form class="form-registro" action="https://formspree.io/tiagocabrera14@gmail.com" method="POST">
+
+        <input type="text" class="input-registro" name="nombre" placeholder="Ingrese el nombre" required>
+
+        <input type="number" class="input-registro" name="edad" placeholder="Ingrese la edad" required>
+
+        <input type="email" class="input-registro" name="correo" placeholder="Ingrese su correo" required>
+
+        <input type="password" class="input-registro" name="contraseña" placeholder="Ingrese su contraseña" required>
+
+        <label for="color_mascota">Color</label>
+        <input type="color" class="color-registro" id="color_mascota" name="color" required>
+
+        <div class="div-genero">
+            <label for="genero_m">Macho</label>
+            <input type="radio" id="genero_m" name="genero" value="macho">
+
+            <label for="genero_h">Hembra</label>
+            <input type="radio" id="genero_h" name="genero" value="hembra">
+        </div>
+
+        <select name="tipo_mascota" class="select-registro">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="cobayo">Cobayo</option>
+        </select>
+
+        <div class="div-caracteristicas">
+            <label for="txtArea">Contanos cómo es tu mascota</label>
+            <textarea name="caracteristicas" cols="40" rows="10" id="txtArea"></textarea>
+        </div>
+
+        <div class="div-bases">
+            <label for="byc">Acepto las bases y condiciones</label>
+            <input type="checkbox" id="byc" name="bases_y_condiciones" value="acepta">
+        </div>
+
+        <input type="submit" value="Registrar" class="boton-registro">
+
+    </form>
+
+</body>
+
+</html>

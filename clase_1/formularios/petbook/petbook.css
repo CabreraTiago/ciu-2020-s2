@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('fondo.png');
+}
+
+h1,
+p {
+    text-align: center;
+    font-family: Calibri;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.form-registro {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 20px;
+    font-family: Calibri;
+    color: white;
+}
+
+.input-registro {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #1f53c5;
+    font-family: Calibri;
+    font-size: 18px;
+    color: white;
+}
+
+.color-registro {
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+.div-genero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+.select-registro {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #1f53c5;
+    font-family: Calibri;
+    font-size: 18px;
+    color: white;
+}
+
+.div-bases {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+.div-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+.boton-registro {
+    width: 100%;
+    background: #536b9e;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+}
