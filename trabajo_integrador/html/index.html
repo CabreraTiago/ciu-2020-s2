@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taller Javascript</title>
-    <link rel="stylesheet" href="../estilos.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <script src="../js/navbar.js"></script>
   </head>
   <body>
     <section>
+      <ul class="nav" id="nav">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li><a href="funciones.html">Funciones</a></li>
+        <li><a href="objetos.html">Objetos</a></li>
+        <li><a href="arreglos.html">Arreglos</a></li>
+        <li><a href="promesas.html">Promesas</a></li>
+        <li><a href="poo.html">POO</a></li>
+      </ul>
       <div class="content">
         <div>
           <h2>Javascript</h2>
@@ -18,25 +28,20 @@
             objetos, basado en prototipos, imperativo, débilmente tipado y
             dinámico.
           </p>
-          <a href="#">Leer Más</a>
+          <a
+            href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+            target="_blank"
+            >Leer Más</a
+          >
         </div>
       </div>
       <div class="logo-home">
         <img src="../img/js.png" />
       </div>
-      <ul class="nav" id="nav">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="variables.html">Variables</a></li>
-        <li><a href="#">Funciones</a></li>
-        <li><a href="#">Objetos</a></li>
-        <li><a href="#">Arreglos</a></li>
-        <li><a href="#">Promesas</a></li>
-        <li><a href="#">POO</a></li>
-      </ul>
       <ul class="more">
-        <li><a href="#">Node JS</a></li>
-        <li><a href="#">React JS</a></li>
-        <li><a href="#">Angular JS</a></li>
+        <li><a href="https://nodejs.org/es/" target="_blank">Node JS</a></li>
+        <li><a href="https://es.reactjs.org/" target="_blank">React JS</a></li>
+        <li><a href="https://angularjs.org/" target="_blank">Angular JS</a></li>
       </ul>
     </section>
     <span class="menu" id="toggle" onclick="menuToggle()"></span>
