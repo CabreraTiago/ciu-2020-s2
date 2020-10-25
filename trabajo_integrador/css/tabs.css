@@ -1,35 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  color: #fff;
 }
 
-section {
-  position: relative;
-  widows: 100%;
-  min-height: 100vh;
-  background: #222;
+body {
+  background: #121111;
+}
+
+.div-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
-section .content {
-  position: relative;
-  left: 150px;
-  bottom: 150px;
-}
-
-section .content h1 {
-  color: #fff;
-}
-
-section .content h2 {
-  color: #fff;
-}
-
-section .content li {
-  color: #fff;
+code {
+  font-family: Consolas, "courier new";
 }

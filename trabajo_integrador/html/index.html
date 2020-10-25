@@ -9,41 +9,38 @@
     <script src="../js/navbar.js"></script>
   </head>
   <body>
-    <section>
-      <ul class="nav" id="nav">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="variables.html">Variables</a></li>
-        <li><a href="funciones.html">Funciones</a></li>
-        <li><a href="objetos.html">Objetos</a></li>
-        <li><a href="arreglos.html">Arreglos</a></li>
-        <li><a href="promesas.html">Promesas</a></li>
-        <li><a href="poo.html">POO</a></li>
-      </ul>
-      <div class="content">
-        <div>
-          <h2>Javascript</h2>
-          <p>
-            JavaScript (JS) es un lenguaje de programación interpretado,
-            dialecto del estándar ECMAScript. Se define como orientado a
-            objetos, basado en prototipos, imperativo, débilmente tipado y
-            dinámico.
-          </p>
-          <a
-            href="https://developer.mozilla.org/es/docs/Web/JavaScript"
-            target="_blank"
-            >Leer Más</a
-          >
-        </div>
+    <nav class="nav">
+      <a href="#" class="active cool-link">Home</a>
+      <a href="variables.html" class="cool-link">Variables</a>
+      <a href="funciones.html" class="cool-link">Funciones</a>
+      <a href="objetos.html" class="cool-link">Objetos</a>
+      <a href="arreglos.html" class="cool-link">Arreglos</a>
+      <a href="promesas.html" class="cool-link">Promesas</a>
+      <a href="poo.html" class="cool-link">POO</a>
+    </nav>
+    <div class="parent">
+      <div class="firstChild">
+        <h2>Javascript</h2>
+        <p>
+          JavaScript (JS) es un lenguaje de programación interpretado, dialecto
+          del estándar ECMAScript. Se define como orientado a objetos, basado en
+          prototipos, imperativo, débilmente tipado y dinámico.
+        </p>
+        <span>
+          <a href="#" target="_blank">Leer Más</a>
+        </span>
       </div>
-      <div class="logo-home">
+      <div class="secondChild">
         <img src="../img/js.png" />
       </div>
-      <ul class="more">
+    </div>
+    <div class="div-frameworks">
+      <ul class="frameworks">
         <li><a href="https://nodejs.org/es/" target="_blank">Node JS</a></li>
         <li><a href="https://es.reactjs.org/" target="_blank">React JS</a></li>
         <li><a href="https://angularjs.org/" target="_blank">Angular JS</a></li>
+        <li><a href="https://vuejs.org/" target="_blank">Vue JS</a></li>
       </ul>
-    </section>
-    <span class="menu" id="toggle" onclick="menuToggle()"></span>
+    </div>
   </body>
 </html>

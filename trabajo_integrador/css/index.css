@@ -1,152 +1,85 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
-section {
-  position: relative;
-  widows: 100%;
-  min-height: 100vh;
-  background: #222;
+body {
+  background: #121111;
+}
+
+.parent {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
 }
 
-section .content {
-  position: relative;
-  padding: 100px 50px 100px 150px;
-  box-sizing: border-box;
+.firstChild {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
 }
 
-section .content h2 {
+.firstChild h2 {
   color: #fff;
-  font-size: 3em;
+  margin: 0;
+  font-size: 48px;
   font-weight: 800;
 }
 
-section .content p {
+.firstChild p {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 19px;
   font-weight: 800;
 }
 
-section .content a {
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  margin-top: 20px;
+.firstChild a {
   background: #f0db4f;
   color: #222;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.95em;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-section .logo-home {
-  position: relative;
-  padding-right: 100px;
+.secondChild {
+  display: flex;
+  padding: 100px;
 }
 
-section .logo-home img {
+.secondChild img {
   max-width: 200px;
   max-height: 200px;
 }
 
 .more {
   position: absolute;
-  bottom: 75px;
-  left: 150px;
+  bottom: 30px;
+  left: 30px;
   display: flex;
 }
 
-.more li {
+.div-frameworks {
+  padding: 50px;
+}
+
+.frameworks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.frameworks li {
   list-style: none;
 }
 
-.more li a {
+.frameworks li a {
   text-decoration: none;
   color: #999;
   margin-right: 30px;
   font-size: 0.9em;
 }
 
-.more li a:hover {
+.frameworks li a:hover {
   color: #fff;
 }
-
-/* @media (max-width: 991px) {
-  .menu {
-    position: fixed;
-    top: 40px;
-    right: 40px;
-    width: 30px;
-    height: 30px;
-    background: url(img/menu.png);
-    filter: invert(1);
-    background-size: 30px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    z-index: 1000;
-  }
-  .menu.active {
-    background: url(img/cerrar.png);
-    filter: invert(1);
-    background-size: 30px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    z-index: 1000;
-  }
-  .nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    z-index: 11;
-    border: none;
-    padding: 50px;
-  }
-  .nav.active {
-    left: 0;
-  }
-  .nav li {
-    margin: 5px 0;
-  }
-  section {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-  section .content {
-    padding: 50px;
-    margin-bottom: 30px;
-  }
-  section .content h2 {
-    font-size: 1.5em;
-  }
-  section .content p {
-    font-size: 1em;
-  }
-  section .content a {
-    font-size: 0.8em;
-    padding: 10px;
-  }
-  section .logo-home {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0;
-    margin-top: 20px;
-  }
-  section .logo-home img {
-    max-width: 300px;
-  }
-} */
