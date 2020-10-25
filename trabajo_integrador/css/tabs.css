@@ -12,6 +12,8 @@ code {
   font-family: Consolas, "courier new";
 }
 
+/* Variables */
+
 .parent-variables {
   display: flex;
   flex-direction: column;
@@ -24,5 +26,22 @@ code {
 }
 
 .ej-variables pre {
+  align-self: center;
+}
+
+/* Funciones */
+
+.parent-funciones {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px 0px 50px;
+}
+
+.child-funciones {
+  display: flex;
+  flex-direction: column;
+}
+
+.ej-funciones {
   align-self: center;
 }

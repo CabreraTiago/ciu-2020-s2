@@ -17,8 +17,80 @@
       <a href="promesas.html" class="cool-link">Promesas</a>
       <a href="poo.html" class="cool-link">POO</a>
     </nav>
-    <div class="div-container">
-      <h2>Funciones</h2>
+    <div class="parent-funciones">
+      <div class="child-funciones">
+        <h2>Declaración de una función</h2>
+        <p>
+          Se le asigna un nombre a la función. Dicha función se debe cargar en
+          el ámbito de la aplicación antes de la ejecución del código.
+        </p>
+        <pre class="ej-funciones">
+          <code>
+            function miFuncion() {
+              console.log("Esta es una función clásica");
+            }
+            
+            miFuncion(); // Salida: Esta es una función clásica
+          </code>
+        </pre>
+      </div>
+
+      <div class="child-funciones">
+        <h2>Expresiones <em>function</em></h2>
+        <p>
+          Se crea una función <em>anónima</em> y se le asigna a una variable.
+          Esta función no se encuentra lista hasta que esa línea en particular
+          sea evaluada durante la ejecución del código
+        </p>
+        <pre class="ej-funciones">
+          <code>
+            let smartphone = function (marca) {
+              console.log(`Marca smartphone: ${marca}`);
+            };
+            
+            smartphone("Sony"); // Salida: Marca smartphone: Sony
+          </code>
+        </pre>
+      </div>
+
+      <div class="child-funciones">
+        <h2><em>Arrow</em> function</h2>
+        <p>
+          Sirve para simplificar la escritura del código. Se pasa el nombre de
+          la función para detrás del paréntesis y se coloca el símbolo
+          <b>=></b>.
+          <br />
+          En sus dos maneras la función pierde el nombre y se manda solo el
+          parámetro si es uno solo. Puede ir sin paréntesis.
+        </p>
+        <pre class="ej-funciones">
+          <code>
+            let smartTV = (marca) => {
+              return `El mejor Smart TV es ${marca}`;
+            };
+            
+            console.log(smartTV("El mejor Smart TV es Samsung"));
+
+            <br>
+
+            let miniComponente = (marca) =>
+              console.log(`El mejor minicomponente es ${marca}`);
+          
+            miniComponente("Sony"); // Salida: El mejor minicomponente es Sony
+          </code>
+        </pre>
+        <p>Con más de un parámetro:</p>
+        <pre class="ej-funciones">
+          <code>
+            let procesadores = (marca1, marca2) =>
+              console.log(
+                `Los procesadores que dominan el mercado son de ${marca1} y ${marca2}`
+              );
+
+            procesadores("Intel", "AMD"); // Salida: Los procesadores que dominan el mercado son de Intel y AMD
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>
