@@ -18,7 +18,75 @@
       <a href="poo.html" class="cool-link">POO</a>
     </nav>
     <div class="div-container">
-      <h2>Objetos</h2>
+      <div>
+        <h2>Object <em>literal</em></h2>
+        <p>
+          El Object literal nos permite usar un valor por cada variable. Si
+          necesito un objeto distinto pero con la misma estructura, tengo que
+          crear otro objeto.
+        </p>
+        <pre>
+          <code>
+            const notebook = {
+              marca: "Dell",
+              modelo: "Latitude 5480",
+            };
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Acceso a los valores de un objeto</h2>
+        <pre>
+          <code>
+            console.log(notebook.marca); // Salida: Dell
+            console.log(notebook.modelo); // Salida: Latitude 5480
+            
+            console.log(notebook["marca"]); // Salida: Dell
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Object <em>Constructor</em></h2>
+        <p>
+          Si necesitamos muchos objetos del mismo tipo tenemos que usar Object
+          Constructor.
+        </p>
+        <pre>
+          <code>
+            function Tablet(marca, modelo, pantalla) {
+              this.marca = marca;
+              this.modelo = modelo;
+              this.pantalla = pantalla;
+            }
+            
+            const tabletApple = new Tablet("Apple", "Air", 9.7);
+            const tabletLenovo = new Tablet("Lenovo", "M10", 10.1);
+            
+            console.log(tabletApple); // Salida: Tablet { marca: 'Apple', modelo: 'Air', pantalla: 9.7 }
+            console.log(tabletLenovo); // Salida: Tablet { marca: 'Lenovo', modelo: 'M10', pantalla: 10.1 }
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Prototipos</h2>
+        <p>
+          Los prototipos nos sirven para "atar" una función a un determinado
+          tipo de objeto, como si fuera un método propio de ese objeto.
+        </p>
+        <pre>
+          <code>
+            Tablet.prototype.describirTablet = function () {
+              return `La tablet ${this.modelo} de ${this.marca} tiene ${this.pantalla} pulgadas`;
+            };
+            
+            console.log(tabletApple.describirTablet()); // Salida: La tablet Air de Apple tiene 9.7 pulgadas
+            console.log(tabletLenovo.describirTablet()); // Salida: La tablet M10 de Lenovo tiene 10.1 pulgadas
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>
