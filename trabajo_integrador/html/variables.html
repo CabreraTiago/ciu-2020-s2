@@ -17,8 +17,68 @@
       <a href="promesas.html" class="cool-link">Promesas</a>
       <a href="poo.html" class="cool-link">POO</a>
     </nav>
-    <div class="div-container">
-      <h2>Variables</h2>
+    <div class="parent-variables">
+      <div id="var">
+        <h2>Var</h2>
+        <ul>
+          <li>
+            Las variables declaradas con <em>var</em> son procesadas antes de la
+            ejecución del código.
+          </li>
+          <li>
+            El scope de una variable declarada con var, es su contexto de
+            ejecución.
+          </li>
+          <li>
+            El scope de una variable declarada fuera de la función es global.
+          </li>
+        </ul>
+      </div>
+
+      <div id="let">
+        <h2>Let</h2>
+        <p>
+          La instrucción let declara una variable de alcance local con ámbito de
+          bloque(block scope), la cual, opcionalmente, puede ser inicializada
+          con algún valor.
+        </p>
+      </div>
+
+      <div id="const">
+        <h2>Const</h2>
+        <p>
+          Las variables constantes presentan un ámbito de bloque (block scope)
+          tal y como lo hacen las variables definidas usando la instrucción let,
+          con la particularidad de que el valor de una constante no puede
+          cambiarse a través de la reasignación. Las constantes no se pueden
+          redeclarar.
+        </p>
+      </div>
+
+      <div class="ej-variables">
+        <h2>Ejemplos</h2>
+        <pre>
+          <code class="javascript">
+            var desktop = "Lenovo";
+            let notebook = "Dell";
+            const allInOne = "HP";
+            
+            if (desktop) {
+              var desktop = "Asus";
+              console.log(`Adentro del if: ${desktop}`); // Output: Asus
+            }
+            console.log(`Afuera del if: ${desktop}`); // Output: Asus
+            
+            if (notebook) {
+              let notebook = "Acer";
+              console.log(`Adentro del if: ${notebook}`); // Output: Acer
+            }
+            console.log(`Afuera del if: ${notebook}`); // Output: Dell
+            
+            console.log(`Constante: ${allInOne}`); // Output: HP   
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>

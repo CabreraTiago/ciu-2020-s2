@@ -8,11 +8,21 @@ body {
   background: #121111;
 }
 
-.div-container {
+code {
+  font-family: Consolas, "courier new";
+}
+
+.parent-variables {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px 0px 50px;
+}
+
+.ej-variables {
   display: flex;
   flex-direction: column;
 }
 
-code {
-  font-family: Consolas, "courier new";
+.ej-variables pre {
+  align-self: center;
 }
