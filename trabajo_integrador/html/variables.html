@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variables</title>
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/tabs.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -65,15 +72,15 @@
             
             if (desktop) {
               var desktop = "Asus";
-              console.log(`Adentro del if: ${desktop}`); // Salida: Asus
+              console.log(`Dentro del condicional: ${desktop}`); // Salida: Dentro del condicional: Asus
             }
-            console.log(`Afuera del if: ${desktop}`); // Salida: Asus
+            console.log(`Fuera del condicional: ${desktop}`); // Salida: Fuera del condicional: Asus
             
             if (notebook) {
               let notebook = "Acer";
-              console.log(`Adentro del if: ${notebook}`); // Salida: Acer
+              console.log(`Dentro del condicional: ${notebook}`); // Salida: Dentro del condicional: Acer
             }
-            console.log(`Afuera del if: ${notebook}`); // Salida: Dell
+            console.log(`Fuera del condicional: ${notebook}`); // Salida: Fuera del condicional: Dell
             
             console.log(`Constante: ${allInOne}`); // Salida: HP   
           </code>
