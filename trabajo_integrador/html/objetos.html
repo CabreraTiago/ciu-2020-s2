@@ -94,6 +94,87 @@
           </code>
         </pre>
       </div>
+
+      <div>
+        <h2>Object <em>Destructuring</em></h2>
+        <p>
+          La sintaxis de desestructuración es una expresión de JavaScript que
+          permite cargar valores de arreglos o propiedades de objetos en
+          distintas variables.
+        </p>
+        <pre>
+          <code>
+            const smartphones = {
+              iphone: {
+                entrada: "iPhone 12",
+                media: "iPhone 12 Pro",
+                alta: "iPhone 12 Pro Max",
+              },
+              otros: ["Samsung S20", "Huawei P30", "Asus Zenfone 7"],
+            };
+            
+            let { entrada } = smartphones.iphone;
+            console.log(`Usando Object Destructuring: ${entrada}`); // Salida: Usando Object Destructuring: iPhone 12
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Object literal <em>enhacement</em></h2>
+        <p>
+          Se utiliza para agrupar variables del ámbito global y convertirlas en
+          objetos. Es el proceso de reestructuración o reconstrucción.
+        </p>
+        <pre>
+          <code>
+            let marca = "Asus";
+            let modelo = "Zenfone 7";
+            let caracteristicas = [
+              "Procesador Snapdragon 865+",
+              "8GB RAM",
+              "128GB Almacenamiento",
+            ];
+
+            const zenfone = { marca, modelo, caracteristicas };
+
+            console.log(zenfone);
+
+            // Salida:
+            // {
+            //   marca: 'Asus',
+            //   modelo: 'Zenfone 7',
+            //   caracteristicas: [ 'Procesador Snapdragon 865+', '8GB RAM', '128GB Almacenamiento' ]
+            // }
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Agregando funciones a objetos</h2>
+        <p>
+          Cuando creamos un objeto, también le puedo agregar funciones propias
+          en la descripción. Usando la palabra reservada <em>this</em> no tengo
+          que pasar parámetros a esta función, ya que los toma de la descripción
+          del mismo.
+        </p>
+        <pre>
+          <code>
+            const xboxOneS = {
+              marca: "Microsoft",
+              modelo: "Xbox One",
+              procesador: "AMD Jaguar",
+              tipo: "digital",
+              caracteristicas() {
+                console.log(
+                  `La ${this.modelo} de ${this.marca} tiene un procesador ${this.procesador} y es completamente ${this.tipo}.`
+                );
+              },
+            };
+            
+            xboxOneS.caracteristicas(); // Salida: La Xbox One de Microsoft tiene un procesador AMD Jaguar y es completamente digital.
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>
