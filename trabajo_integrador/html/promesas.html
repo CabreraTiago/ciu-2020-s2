@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promesas</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -17,7 +25,79 @@
       <a href="poo.html" class="cool-link">POO</a>
     </nav>
     <div class="div-container">
-      <h2>Promesas</h2>
+      <div>
+        <h2>Definición</h2>
+        <p>
+          Una Promise es un objeto que representa la terminación o el fracaso de
+          una operación asíncrona. Esencialmente, una promesa es un objeto
+          devuelto al cuál se adjuntan funciones callback, en lugar de pasar
+          callbacks a una función. Cuando se realiza un pedido asincrónico a una
+          API hay dos posibilidades:
+        </p>
+        <ol>
+          <li>Que salga todo OK => "resolve"</li>
+          <li>Que algo salga mal => "reject"</li>
+        </ol>
+        <pre>
+          <code class="javascript">
+            let darDeBaja = new Promise((resolve, reject) => {
+              setTimeout(() => {
+                let baja = true;
+            
+                if (baja) {
+                  resolve("Se ha dado de baja");
+                } else {
+                  reject("No se ha podido dar de baja");
+                }
+              }, 2500);
+            });
+            
+            console.log(darDeBaja); // Salida: Promise { pending }
+            
+            darDeBaja.then((resultado_consulta) => {
+              console.log(resultado_consulta); // Salida: Se ha dado de baja
+            });
+            
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2>Ejemplo con la API <em>ramdomuser.me/api</em></h2>
+        <pre>
+          <code class="javascript">
+            const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+
+            const traerUsuarios = (cantidad) =>
+             new Promise((resolve, reject) => {
+              const url = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+
+              const xhr = new XMLHttpRequest(); // Llamado a AJAX
+
+              xhr.open("GET", url, true); // Se abre la conexión
+
+
+              // Verificamos el estado y parseamos el resultado
+              xhr.onload = () => {
+                if (xhr.status === 200) {
+                  resolve(JSON.parse(xhr.responseText).results); 
+                } else {
+                  reject(Error(xhr.statusText));
+                }
+              };
+
+              xhr.onerror = (error) => reject(error);
+
+              xhr.send();
+            });
+
+            traerUsuarios(2).then(
+              (usuarios) => console.log(usuarios),
+              (error) => console.error(new Error(`Se produjo el error ${error}`))
+            );
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>

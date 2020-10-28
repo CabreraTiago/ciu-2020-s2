@@ -34,12 +34,12 @@ body {
   width: 0;
   height: 2px;
   background: #f0db4f;
-  transition: width 0.3s;
+  transition: width 0.5s;
 }
 
 .cool-link:hover::after {
   width: 100%;
-  transition: width 0.3s;
+  transition: width 0.5s;
 }
 
 /* Scrollbar */
