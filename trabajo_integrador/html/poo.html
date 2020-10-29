@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -30,23 +31,26 @@
           Ahora Javascript soporta <em>Programación orientada a objetos</em>
         </p>
         <pre>
-          <code class="javascript">
-            class Persona {
-              constructor(nombre, apellido, edad) {
-                this.nombre = nombre;
-                this.apellido = apellido;
-                this.edad = edad;
+          <code class="javascript" style="display: flex; justify-content: center;">
+            <div id="code1">
+              class Persona {
+                constructor(nombre, apellido, edad) {
+                  this.nombre = nombre;
+                  this.apellido = apellido;
+                  this.edad = edad;
+                }
+                presentacion() {
+                  return `${this.nombre} ${this.apellido} tiene ${this.edad} años`;
+                }
               }
-              presentacion() {
-                return `${this.nombre} ${this.apellido} tiene ${this.edad} años`;
-              }
-            }
-            
-            let persona1 = new Persona("Camila", "Rodriguez", 30);
-            let persona2 = new Persona("Juan", "Perez", 40);
-            
-            console.log(persona1.presentacion());
-            console.log(persona2.presentacion());
+              
+              let persona1 = new Persona("Camila", "Rodriguez", 30);
+              let persona2 = new Persona("Juan", "Perez", 40);
+              
+              console.log(persona1.presentacion());
+              console.log(persona2.presentacion());
+           </div>
+           <button class="btn-copiar" data-clipboard-target="#code1"><img src="../img/copy.png" class="img-copy" /></button>
           </code>
         </pre>
       </div>
@@ -54,24 +58,31 @@
       <div>
         <h2><em>Herencia</em></h2>
         <pre>
-          <code class="javascript">
-            class Estudiante extends Persona {
-              constructor(nombre, apellido, edad, carrera) {
-                super(nombre, apellido, edad);
-                this.carrera = carrera;
+          <code class="javascript" style="display: flex; justify-content: center;">
+            <div id="code2">
+              class Estudiante extends Persona {
+                constructor(nombre, apellido, edad, carrera) {
+                  super(nombre, apellido, edad);
+                  this.carrera = carrera;
+                }
+                carreraQueEstudia() {
+                  return `${this.nombre} ${this.apellido} estudia la carrera ${this.carrera}`;
+                }
               }
-              carreraQueEstudia() {
-                return `${this.nombre} ${this.apellido} estudia la carrera ${this.carrera}`;
-              }
-            }
-            
-            let estudiante = new Estudiante("Pedro", "Garcia", 27, "Medicina");
-            
-            console.log(estudiante.presentacion()); // Salida: Pedro Garcia tiene 27 años
-            console.log(estudiante.carreraQueEstudia()); // Salida: Pedro Garcia estudia la carrera Medicina
+              
+              let estudiante = new Estudiante("Pedro", "Garcia", 27, "Medicina");
+              
+              console.log(estudiante.presentacion()); // Salida: Pedro Garcia tiene 27 años
+              console.log(estudiante.carreraQueEstudia()); // Salida: Pedro Garcia estudia la carrera Medicina
+            </div>
+            <button class="btn-copiar" data-clipboard-target="#code2"><img src="../img/copy.png" class="img-copy" /></button>
           </code>
         </pre>
       </div>
     </div>
+
+    <script>
+      new ClipboardJS(".btn-copiar");
+    </script>
   </body>
 </html>
