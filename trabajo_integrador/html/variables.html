@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -25,7 +26,7 @@
       <a href="poo.html" class="cool-link">POO</a>
     </nav>
     <div class="div-container">
-      <div id="var">
+      <div>
         <h2>Var</h2>
         <ul>
           <li>
@@ -42,7 +43,7 @@
         </ul>
       </div>
 
-      <div id="let">
+      <div>
         <h2>Let</h2>
         <p>
           La instrucción let declara una variable de alcance local con ámbito de
@@ -51,7 +52,7 @@
         </p>
       </div>
 
-      <div id="const">
+      <div>
         <h2>Const</h2>
         <p>
           Las variables constantes presentan un ámbito de bloque (block scope)
@@ -62,30 +63,35 @@
         </p>
       </div>
 
-      <div id="ej-variables">
-        <h2>Ejemplos</h2>
+      <div>
         <pre>
-          <code class="javascript">
-            var desktop = "Lenovo";
-            let notebook = "Dell";
-            const allInOne = "HP";
-            
-            if (desktop) {
-              var desktop = "Asus";
-              console.log(`Dentro del condicional: ${desktop}`); // Salida: Dentro del condicional: Asus
-            }
-            console.log(`Fuera del condicional: ${desktop}`); // Salida: Fuera del condicional: Asus
-            
-            if (notebook) {
-              let notebook = "Acer";
-              console.log(`Dentro del condicional: ${notebook}`); // Salida: Dentro del condicional: Acer
-            }
-            console.log(`Fuera del condicional: ${notebook}`); // Salida: Fuera del condicional: Dell
-            
-            console.log(`Constante: ${allInOne}`); // Salida: HP   
+          <code class="javascript" style="display: flex; justify-content: center;">
+            <div id="code">
+              var desktop = "Lenovo";
+              let notebook = "Dell";
+              const allInOne = "HP";
+              
+              if (desktop) {
+                var desktop = "Asus";
+                console.log(`Dentro del condicional: ${desktop}`); // Salida: Dentro del condicional: Asus
+              }
+              console.log(`Fuera del condicional: ${desktop}`); // Salida: Fuera del condicional: Asus
+              
+              if (notebook) {
+                let notebook = "Acer";
+                console.log(`Dentro del condicional: ${notebook}`); // Salida: Dentro del condicional: Acer
+              }
+              console.log(`Fuera del condicional: ${notebook}`); // Salida: Fuera del condicional: Dell
+              
+              console.log(`Constante: ${allInOne}`); // Salida: HP   
+            </div>
+            <button class="btn-copiar" data-clipboard-target="#code"><img src="../img/copy.png" class="img-copy" /></button>
           </code>
         </pre>
       </div>
     </div>
+    <script>
+      new ClipboardJS(".btn-copiar");
+    </script>
   </body>
 </html>

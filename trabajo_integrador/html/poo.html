@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programación Orientada a Objetos</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -17,7 +25,53 @@
       <a href="#" class="active cool-link">POO</a>
     </nav>
     <div class="div-container">
-      <h2>Programación Orientada a Objetos</h2>
+      <div>
+        <p>
+          Ahora Javascript soporta <em>Programación orientada a objetos</em>
+        </p>
+        <pre>
+          <code class="javascript">
+            class Persona {
+              constructor(nombre, apellido, edad) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+              }
+              presentacion() {
+                return `${this.nombre} ${this.apellido} tiene ${this.edad} años`;
+              }
+            }
+            
+            let persona1 = new Persona("Camila", "Rodriguez", 30);
+            let persona2 = new Persona("Juan", "Perez", 40);
+            
+            console.log(persona1.presentacion());
+            console.log(persona2.presentacion());
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2><em>Herencia</em></h2>
+        <pre>
+          <code class="javascript">
+            class Estudiante extends Persona {
+              constructor(nombre, apellido, edad, carrera) {
+                super(nombre, apellido, edad);
+                this.carrera = carrera;
+              }
+              carreraQueEstudia() {
+                return `${this.nombre} ${this.apellido} estudia la carrera ${this.carrera}`;
+              }
+            }
+            
+            let estudiante = new Estudiante("Pedro", "Garcia", 27, "Medicina");
+            
+            console.log(estudiante.presentacion()); // Salida: Pedro Garcia tiene 27 años
+            console.log(estudiante.carreraQueEstudia()); // Salida: Pedro Garcia estudia la carrera Medicina
+          </code>
+        </pre>
+      </div>
     </div>
   </body>
 </html>

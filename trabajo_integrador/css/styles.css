@@ -167,6 +167,18 @@ code {
   color: #fff;
 }
 
+.btn-copiar {
+  background-color: black;
+  align-self: flex-end;
+  border: none;
+  cursor: pointer;
+}
+
+.img-copy {
+  width: 40px;
+  height: 40px;
+}
+
 table,
 th,
 td {
