@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/tomorrow-night-bright.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -39,25 +40,27 @@
           <li>Que algo salga mal => "reject"</li>
         </ol>
         <pre>
-          <code class="javascript">
-            let darDeBaja = new Promise((resolve, reject) => {
-              setTimeout(() => {
-                let baja = true;
-            
-                if (baja) {
-                  resolve("Se ha dado de baja");
-                } else {
-                  reject("No se ha podido dar de baja");
-                }
-              }, 2500);
-            });
-            
-            console.log(darDeBaja); // Salida: Promise { pending }
-            
-            darDeBaja.then((resultado_consulta) => {
-              console.log(resultado_consulta); // Salida: Se ha dado de baja
-            });
-            
+          <code class="javascript" style="display: flex; justify-content: center;">
+            <div id="code1">
+              let darDeBaja = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  let baja = true;
+              
+                  if (baja) {
+                    resolve("Se ha dado de baja");
+                  } else {
+                    reject("No se ha podido dar de baja");
+                  }
+                }, 2500);
+              });
+              
+              console.log(darDeBaja); // Salida: Promise { pending }
+              
+              darDeBaja.then((resultado_consulta) => {
+                console.log(resultado_consulta); // Salida: Se ha dado de baja
+              });
+            </div>
+            <button class="btn-copiar" data-clipboard-target="#code1"><img src="../img/copy.png" class="img-copy" /></button>
           </code>
         </pre>
       </div>
@@ -65,39 +68,46 @@
       <div>
         <h2>Ejemplo con la API <em>ramdomuser.me/api</em></h2>
         <pre>
-          <code class="javascript">
-            const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+          <code class="javascript" style="display: flex; justify-content: center;">
+            <div id="code2">
+              const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-            const traerUsuarios = (cantidad) =>
-             new Promise((resolve, reject) => {
-              const url = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+              const traerUsuarios = (cantidad) =>
+              new Promise((resolve, reject) => {
+                const url = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
 
-              const xhr = new XMLHttpRequest(); // Llamado a AJAX
+                const xhr = new XMLHttpRequest(); // Llamado a AJAX
 
-              xhr.open("GET", url, true); // Se abre la conexión
+                xhr.open("GET", url, true); // Se abre la conexión
 
 
-              // Verificamos el estado y parseamos el resultado
-              xhr.onload = () => {
-                if (xhr.status === 200) {
-                  resolve(JSON.parse(xhr.responseText).results); 
-                } else {
-                  reject(Error(xhr.statusText));
-                }
-              };
+                // Verificamos el estado y parseamos el resultado
+                xhr.onload = () => {
+                  if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText).results); 
+                  } else {
+                    reject(Error(xhr.statusText));
+                  }
+                };
 
-              xhr.onerror = (error) => reject(error);
+                xhr.onerror = (error) => reject(error);
 
-              xhr.send();
-            });
+                xhr.send();
+              });
 
-            traerUsuarios(2).then(
-              (usuarios) => console.log(usuarios),
-              (error) => console.error(new Error(`Se produjo el error ${error}`))
-            );
+              traerUsuarios(2).then(
+                (usuarios) => console.log(usuarios),
+                (error) => console.error(new Error(`Se produjo el error ${error}`))
+              );
+            </div>
+            <button class="btn-copiar" data-clipboard-target="#code2"><img src="../img/copy.png" class="img-copy" /></button>
           </code>
         </pre>
       </div>
     </div>
+
+    <script>
+      new ClipboardJS(".btn-copiar");
+    </script>
   </body>
 </html>
